@@ -1,0 +1,27 @@
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/afterBreakfast"
+            android:title="@string/afterBreakfast" />
+
+        <item
+            android:id="@+id/beforeBreakfast"
+            android:title="@string/beforeBreakfast" />
+
+        <item
+            android:id="@+id/afterLunch"
+            android:title="@string/afterLunch" />
+
+        <item
+            android:id="@+id/beforeLunch"
+            android:title="@string/beforeLunch" />
+
+        <item
+            android:id="@+id/afterDinner"
+            android:title="@string/afterDinner" />
+
+        <item
+            android:id="@+id/beforeDinner"
+            android:title="@string/beforeDinner" />
+
+    </menu>
