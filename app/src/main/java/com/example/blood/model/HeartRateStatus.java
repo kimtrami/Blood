@@ -4,13 +4,19 @@ public class HeartRateStatus {
 
     private String titleState;
     private int titleStateColor;
-    private int bgState;
+    private String bgState;
     private int imgState;
+    private int position;
 
     public HeartRateStatus(String titleState, int titleStateColor, int imgState) {
         this.titleState = titleState;
         this.titleStateColor = titleStateColor;
         this.imgState = imgState;
+    }
+
+    public HeartRateStatus(int position, String bgState) {
+        this.position = position;
+        this.bgState = bgState;
     }
 
     public String getTitleState() {
@@ -29,11 +35,11 @@ public class HeartRateStatus {
         this.titleStateColor = titleStateColor;
     }
 
-    public int getBgState() {
+    public String getBgState() {
         return bgState;
     }
 
-    public void setBgState(int bgState) {
+    public void setBgState(String bgState) {
         this.bgState = bgState;
     }
 

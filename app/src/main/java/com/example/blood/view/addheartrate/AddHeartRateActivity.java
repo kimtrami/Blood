@@ -84,20 +84,22 @@ public class AddHeartRateActivity extends BaseActivity<ActivityAddHeartRateBindi
             viewModel.update(this);
         });
 
-        viewModel.getPreMutableLiveData().observe(this,id ->{
-            if(id > 0){
+        viewModel.getPreMutableLiveData().observe(this, id -> {
+            if (id > 0) {
                 Toast.makeText(this, "Save Success", Toast.LENGTH_SHORT).show();
                 viewModel.updateID(id);
                 Gson gson = new Gson();
                 String keySugar = gson.toJson(viewModel.getHeartRateEntity());
-               Intent intent = new Intent(this, ResultHeartRateActivity.class);
-               intent.putExtra(Utils.KEY_SAVE_HEART_RATE, keySugar);
-               startActivity(intent);
+                Intent intent = new Intent(this, ResultHeartRateActivity.class);
+                intent.putExtra(Utils.KEY_SAVE_HEART_RATE, keySugar);
+                startActivity(intent);
+                finish();
             }
         });
 
 
     }
+
     @Override
     public void initializeData() {
         data = viewModel.intiData();
@@ -152,7 +154,7 @@ public class AddHeartRateActivity extends BaseActivity<ActivityAddHeartRateBindi
 
         timePicker.show(getSupportFragmentManager(), "TIME_PICKER");
 
-        timePicker.addOnPositiveButtonClickListener(view ->{
+        timePicker.addOnPositiveButtonClickListener(view -> {
             hour = timePicker.getHour();
             minute = timePicker.getMinute();
 
@@ -166,9 +168,9 @@ public class AddHeartRateActivity extends BaseActivity<ActivityAddHeartRateBindi
 
     }
 
-    private void insertNote(){
-       String note =  binding.edtNote.getText().toString();
-       viewModel.updateNote(note);
+    private void insertNote() {
+        String note = binding.edtNote.getText().toString();
+        viewModel.updateNote(note);
     }
 
     private void renderHeartRateStatus() {

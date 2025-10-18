@@ -2,6 +2,8 @@ package com.example.blood.view.resultheartrate;
 
 import androidx.lifecycle.ViewModel;
 
+import com.example.blood.R;
+import com.example.blood.model.HeartRateStatus;
 import com.example.blood.model.InfoDetail;
 
 import java.util.ArrayList;
@@ -12,13 +14,35 @@ public class ResultHeartRateViewModel extends ViewModel {
     private List<InfoDetail> data = new ArrayList<>();
 
 
+    public List<HeartRateStatus> initDataStatus(){
 
+        List<HeartRateStatus> data = new ArrayList<>();
+        data.add(new HeartRateStatus(0, "#41ACE9"));
+        data.add(new HeartRateStatus(1, "#00C57E"));
+        data.add(new HeartRateStatus(2, "#FB5555"));
+        return data;
+    }
 
+    public HeartRateStatus checkTitleStateHeartRate(int bpm){
+        String title;
+        int titleColor;
+        int imgState;
 
-
-
-
-
+        if(bpm <= 60 ){
+            title = "Low Heart Rate";
+            titleColor = R.color.Low;
+            imgState = R.drawable.low_heart_rate;
+        } else if (bpm <= 100) {
+            title = "Normal Heart Rate";
+            titleColor = R.color.Normal;
+            imgState = R.drawable.heart_normal;
+        } else {
+            title = "Diabetes Heart Rate";
+            titleColor = R.color.bp_danger;
+            imgState = R.drawable.diabetes_heart_rate;
+        }
+        return new HeartRateStatus(title, titleColor, imgState);
+    }
 
 
     public List<InfoDetail> initDataDetail(){
@@ -35,6 +59,5 @@ public class ResultHeartRateViewModel extends ViewModel {
 
         return data;
     }
-
 
 }

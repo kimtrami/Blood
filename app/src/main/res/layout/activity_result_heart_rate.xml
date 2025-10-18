@@ -106,44 +106,46 @@
                 android:id="@+id/imgHeartRateStatus"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                app:layout_constraintHorizontal_bias="0.3"
                 android:src="@drawable/heart_normal"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
                 android:id="@+id/txtStateHeartRate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:fontFamily="@font/montserrat_700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/imgHeartRateStatus"
                 app:layout_constraintTop_toTopOf="@id/imgHeartRateStatus" />
 
             <TextView
-                android:id="@+id/txtMg_dL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mulish_semi_bold_600"
-                android:textColor="#404040"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="@id/txtStateHeartRate"
-                app:layout_constraintTop_toTopOf="@id/imgHeartRateStatus" />
-
-            <TextView
                 android:id="@+id/txtBpm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter_semi_bold_600"
                 android:textSize="20sp"
                 android:textColor="#404040"
-                app:layout_constraintBottom_toBottomOf="@id/imgHeartRateStatus"
-                app:layout_constraintStart_toEndOf="@id/imgHeartRateStatus" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintStart_toStartOf="@id/txtStateHeartRate"
+                app:layout_constraintTop_toBottomOf="@id/txtStateHeartRate" />
 
+            <TextView
+                android:id="@+id/txtBPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/mulish_semi_bold_600"
+                android:textSize="20sp"
+                android:textColor="#808080"
+                app:layout_constraintStart_toEndOf="@id/txtBpm"
+                app:layout_constraintBaseline_toBaselineOf="@id/txtBpm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lstStatus"
