@@ -5,11 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.PopupWindow;
-import android.widget.Toast;
-
-import com.example.blood.R;
-import com.example.blood.databinding.ActivityAddBloodSugarBinding;
-import com.example.blood.databinding.ItemPopupSelectionBloodSugarBinding;
 import com.example.blood.databinding.PopupSelectionBloodSugraBinding;
 import com.example.blood.view.adapter.OnItemFunctionPopup;
 import com.example.blood.view.adapter.PopupBloodSugarAdapter;
@@ -32,6 +27,7 @@ public class FunctionPopup extends PopupWindow implements OnItemFunctionPopup {
     public void setListener(OnItemFunctionPopup listener) {
         this.listener = listener;
     }
+
 
     public void onCreate(View anchor){
         binding = PopupSelectionBloodSugraBinding.inflate(LayoutInflater.from(mContext));
