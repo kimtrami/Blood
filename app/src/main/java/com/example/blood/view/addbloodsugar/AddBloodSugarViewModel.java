@@ -69,10 +69,10 @@ public class AddBloodSugarViewModel extends ViewModel {
     public List<Sugar> initData() {
         List<Sugar> data = new ArrayList<>();
 
-        data.add(new Sugar("Low", "#41ACE9", "#41ACE9", "< 4.0"));
-        data.add(new Sugar("Normal", "#00C57E", "#00C57E", "4.0 - 5.5"));
-        data.add(new Sugar("Pre-diabetes", "#E9D841", "#E9D841", "5.5 - 7.0"));
-        data.add(new Sugar("Diabetes", "#FB5555", "#FB5555", "5.5 - 7.0"));
+        data.add(new Sugar("Thấp", "#41ACE9", "#41ACE9", "< 4.0"));
+        data.add(new Sugar("Bình Thường", "#00C57E", "#00C57E", "4.0 - 5.5"));
+        data.add(new Sugar("Tiền tiểu đường", "#E9D841", "#E9D841", "5.5 - 7.0"));
+        data.add(new Sugar("Tiểu đường", "#FB5555", "#FB5555", "5.5 - 7.0"));
 
         return data;
     }

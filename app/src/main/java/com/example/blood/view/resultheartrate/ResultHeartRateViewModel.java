@@ -29,35 +29,42 @@ public class ResultHeartRateViewModel extends ViewModel {
         int imgState;
 
         if(bpm <= 60 ){
-            title = "Low Heart Rate";
+            title = "Nhịp tim thấp";
             titleColor = R.color.Low;
             imgState = R.drawable.low_heart_rate;
         } else if (bpm <= 100) {
-            title = "Normal Heart Rate";
+            title = "Nhịp tim bình thường";
             titleColor = R.color.Normal;
             imgState = R.drawable.heart_normal;
         } else {
-            title = "Diabetes Heart Rate";
+            title = "Nhịp tim cao";
             titleColor = R.color.bp_danger;
             imgState = R.drawable.diabetes_heart_rate;
         }
+
         return new HeartRateStatus(title, titleColor, imgState);
     }
 
 
     public List<InfoDetail> initDataDetail(){
-        data.add(new InfoDetail("What should you know about \n" +
-                "your Pulse rate?", "Even if you’re not an athlete, knowledge about your heart rate can help you monitor your fitness level — and it might even help you spot developing health problems.\n" +
-                "Your heart rate, or pulse, is the number of times your heart beats per minute. Normal heart rate varies from person to person. Knowing yours can be an important heart-health gauge.\n" +
-                "As you age, changes in the rate and regularity of your pulse can change and may signify a heart conditions or other condition that needs to be addressed."));
+        data.add(new InfoDetail(
+                "Bạn cần biết gì về\nnhịp tim của mình?",
+                "Ngay cả khi bạn không phải là vận động viên, hiểu rõ về nhịp tim cũng giúp bạn theo dõi mức độ thể chất — và thậm chí có thể giúp bạn phát hiện sớm các vấn đề sức khỏe.\n" +
+                        "Nhịp tim (pulse) là số lần tim đập trong một phút. Nhịp tim bình thường thay đổi tùy từng người. Việc biết được nhịp tim của bản thân là một thước đo quan trọng để đánh giá sức khỏe tim mạch.\n" +
+                        "Khi bạn già đi, nhịp tim và độ đều đặn có thể thay đổi — và những thay đổi này đôi khi cho thấy các bệnh lý về tim hoặc những vấn đề sức khỏe khác cần được kiểm tra."
+        ));
 
-        data.add(new InfoDetail("How other factors affect Pulse rate"," - Air temperature: When temperatures and the humidity soar, the heart pumps a little more blood, so your pulse rate may increase, but usually no more than five to 10 beats a minute.\n" +
-                " - Body position: Resting, sitting or standing, your pulse is usually the same. Sometimes as you stand for the first 15 to 20 seconds, your pulse may go up a little bit, but after a couple of minutes it should settle down.\n" +
-                " - Emotions: If you’re stressed, anxious or extraordinarily happy or sad your emotions can raise your pulse.\n" +
-                " - Body size: Body size usually doesn’t change pulse. If you’re very obese, you might see a higher resting pulse than normal, but usually not more than 100.\n" +
-                " - Medication use: Meds that block your adrenaline (beta blockers) tend to slow your pulse, while too much thyroid medication or too high of a dosage will raise it."));
+        data.add(new InfoDetail(
+                "Các yếu tố khác ảnh hưởng đến nhịp tim",
+                " - Nhiệt độ không khí: Khi thời tiết nóng hoặc độ ẩm cao, tim cần bơm nhiều máu hơn, nên nhịp tim có thể tăng nhẹ (khoảng 5–10 nhịp mỗi phút).\n" +
+                        " - Tư thế cơ thể: Khi nghỉ ngơi, ngồi hoặc đứng, nhịp tim thường không thay đổi nhiều. Khi bạn vừa đứng lên, nhịp tim có thể tăng nhẹ trong 15–20 giây đầu, sau đó sẽ ổn định lại.\n" +
+                        " - Cảm xúc: Căng thẳng, lo lắng, buồn hoặc quá vui đều có thể làm tăng nhịp tim.\n" +
+                        " - Cân nặng: Cân nặng thường không làm thay đổi nhịp tim. Tuy nhiên, nếu bạn bị béo phì, nhịp tim lúc nghỉ có thể cao hơn bình thường nhưng hiếm khi vượt quá 100.\n" +
+                        " - Thuốc đang sử dụng: Thuốc chẹn beta (beta blockers) giúp làm chậm nhịp tim, trong khi dùng quá nhiều thuốc tuyến giáp có thể làm tăng nhịp tim."
+        ));
 
         return data;
     }
+
 
 }

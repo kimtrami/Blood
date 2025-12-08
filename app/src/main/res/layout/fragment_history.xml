@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/mulish_extra_bold_800"
-            android:text="History"
+            android:text="Lịch sử"
             android:textColor="@color/white"
             android:textSize="24sp" />
 

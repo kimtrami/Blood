@@ -1,5 +1,6 @@
 package com.example.blood.view.history;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -20,13 +21,11 @@ public class HistoryFragment extends BaseFragment<FragmentHistoryBinding> {
 
     private HistoryViewModel historyViewModel;
     private HistoryAdapter adapter;
-    private List<PressureEntity> data = new ArrayList<>();
 
     @Override
     protected FragmentHistoryBinding inflateBinding(LayoutInflater inflater, ViewGroup container) {
         return FragmentHistoryBinding.inflate(inflater, container, false);
     }
-
 
     @Override
     public void initializeComponent() {

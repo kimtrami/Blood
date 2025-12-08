@@ -76,7 +76,7 @@ public class ResultHeartRateActivity extends BaseActivity<ActivityResultHeartRat
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void bindView() {
-        binding.txtNote.setText("Note: " + entity.getNote());
+        binding.txtNote.setText("ghi chú: " + entity.getNote());
 
         long time = entity.getTime();
         LocalTime localTime = LocalTime.ofSecondOfDay(time / 1000);

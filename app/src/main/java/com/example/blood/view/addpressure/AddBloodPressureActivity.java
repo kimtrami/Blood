@@ -79,14 +79,14 @@ public class AddBloodPressureActivity extends BaseActivity<ActivityAddBloodPress
             sys = newVal;
             viewModel.insertPressureEntitySys(newVal);
             renderBloodPressureStatus();
-            binding.txtSys.setText("SYS < " + newVal);
+            binding.txtSys.setText("huyết áp tâm thu < " + newVal);
         });
 
         binding.numberPickerDiastolic.setOnValueChangedListener((picker, oldVal, newVal) -> {
             dia = newVal;
             viewModel.insertPressureEntityDia(newVal);
             renderBloodPressureStatus();
-            binding.txtDia.setText("DIA < " + newVal);
+            binding.txtDia.setText("Huyết áp tâm trương < " + newVal);
         });
 
         binding.numberPickerPulse.setOnValueChangedListener((picker, oldVal, newVal) -> {
@@ -139,7 +139,7 @@ public class AddBloodPressureActivity extends BaseActivity<ActivityAddBloodPress
     private void showDatePicker() {
         MaterialDatePicker<Long> datePicker =
                 MaterialDatePicker.Builder.datePicker()
-                        .setTitleText("Select date")
+                        .setTitleText("chọn ngày")
                         .setSelection(selectionLastDate)
                         .build();
 

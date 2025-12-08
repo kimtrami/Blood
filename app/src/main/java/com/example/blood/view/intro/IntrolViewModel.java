@@ -11,11 +11,18 @@ import java.util.List;
 public class IntrolViewModel extends ViewModel {
 
     public List<Intro> initData() {
-        ArrayList<Intro> intros = new ArrayList<>();
-        intros.add(new Intro(R.drawable.intro1, "Blood Pressure Tool", "You can track the Blood Pressure easily and exactly on report."));
-        intros.add(new Intro(R.drawable.intro2, "Graph and Health Report", "See the change of your health in every bar graph on it."));
-        intros.add(new Intro(R.drawable.intro3, "Blood Pressure Information", "Give you useful knowledge about blood pressure."));
-        intros.add(new Intro(R.drawable.intro4, "Track your overall health", "Effortlessly monitor your health with convenience at your fingertips"));
+        ArrayList<Intro> intros = new ArrayList<>();intros.add(new Intro(R.drawable.intro1, "Công cụ theo dõi huyết áp",
+                "Bạn có thể theo dõi huyết áp dễ dàng và chính xác qua các báo cáo."));
+
+        intros.add(new Intro(R.drawable.intro2, "Biểu đồ và báo cáo sức khỏe",
+                "Xem sự thay đổi sức khỏe của bạn qua từng biểu đồ trực quan."));
+
+        intros.add(new Intro(R.drawable.intro3, "Thông tin về huyết áp",
+                "Cung cấp kiến thức hữu ích về huyết áp cho bạn."));
+
+        intros.add(new Intro(R.drawable.intro4, "Theo dõi sức khỏe tổng quan",
+                "Theo dõi sức khỏe tiện lợi và dễ dàng ngay trong tầm tay bạn."));
+
 //        data.setValue(intros);
         return intros;
     }

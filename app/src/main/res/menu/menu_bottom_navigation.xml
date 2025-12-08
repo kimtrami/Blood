@@ -4,21 +4,22 @@
     <item
         android:id="@+id/navTracker"
         android:icon="@drawable/tracker"
-        android:title="Tracker" />
+        android:title="Theo dõi" />
 
     <item
         android:id="@+id/navHistory"
         android:icon="@drawable/history"
-        android:title="History" />
+        android:title="Lịch sử" />
 
     <item
         android:id="@+id/navInfo"
         android:icon="@drawable/document"
-        android:title="Info" />
+        android:title="Thông tin" />
 
     <item
         android:id="@+id/navSetting"
         android:icon="@drawable/settings"
-        android:title="Settings" />
+        android:title="Cài đặt" />
+
 
 </menu>

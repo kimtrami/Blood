@@ -13,16 +13,19 @@ public class InfoDetailHeartRateViewModel extends ViewModel {
 
     public List<InfoDetail> initData(){
         data = new ArrayList<>();
-        data.add(new InfoDetail("What should you know about your Pulse rate?","Even if you’re not an athlete, knowledge about your heart rate can help you monitor your fitness level — and it might even help you spot developing health problems.\n" +
-                "Your heart rate, or pulse, is the number of times your heart beats per minute. Normal heart rate varies from person to person. Knowing yours can be an important heart-health gauge.\n" +
-                "As you age, changes in the rate and regularity of your pulse can change and may signify a heart conditions or other condition that needs to be addressed." ));
+        data.add(new InfoDetail("Bạn cần biết gì về nhịp tim (Pulse)?",
+                "Ngay cả khi bạn không phải là vận động viên, việc hiểu rõ nhịp tim của mình có thể giúp bạn theo dõi mức độ thể chất và thậm chí phát hiện sớm các vấn đề sức khỏe.\n" +
+                        "Nhịp tim, hay còn gọi là pulse, là số lần tim bạn đập trong một phút. Nhịp tim bình thường khác nhau tùy từng người. Việc biết nhịp tim của bản thân là một chỉ số quan trọng để đánh giá sức khỏe tim mạch.\n" +
+                        "Khi bạn già đi, sự thay đổi về tốc độ và tính đều đặn của nhịp tim có thể báo hiệu các bệnh lý về tim hoặc những vấn đề sức khỏe khác cần được chú ý."));
 
-        data.add(new InfoDetail("How other factors affect Pulse rate ", "Air temperature: When temperatures and the humidity soar, the heart pumps a little more blood, so your pulse rate may increase, but usually no more than five to 10 beats a minute.\n" +
-                " - Body position: Resting, sitting or standing, your pulse is usually the same. Sometimes as you stand for the first 15 to 20 seconds, your pulse may go up a little bit, but after a couple of minutes it should settle down.\n" +
-                " - Emotions: If you’re stressed, anxious or extraordinarily happy or sad your emotions can raise your pulse.\n" +
-                " - Body size: Body size usually doesn’t change pulse. If you’re very obese, you might see a higher resting pulse than normal, but usually not more than 100.\n" +
-                " - Medication use: Meds that block your adrenaline (beta blockers) tend to slow your pulse, while too much thyroid medication or too high of a dosage will raise it."));
+        data.add(new InfoDetail("Các yếu tố ảnh hưởng đến nhịp tim",
+                " - Nhiệt độ môi trường: Khi thời tiết nóng ẩm, tim sẽ bơm máu nhiều hơn, khiến nhịp tim tăng nhẹ, nhưng thường chỉ tăng khoảng 5–10 nhịp/phút.\n" +
+                        " - Tư thế cơ thể: Khi nghỉ ngơi, ngồi hoặc đứng, nhịp tim thường tương tự nhau. Khi bạn đứng dậy trong 15–20 giây đầu, nhịp tim có thể tăng nhẹ nhưng sẽ ổn định lại sau vài phút.\n" +
+                        " - Cảm xúc: Căng thẳng, lo lắng, vui mừng hoặc buồn bã đều có thể làm tăng nhịp tim.\n" +
+                        " - Kích thước cơ thể: Thông thường, kích thước cơ thể không ảnh hưởng nhiều đến nhịp tim. Người béo phì có thể có nhịp tim khi nghỉ cao hơn bình thường nhưng hiếm khi vượt quá 100.\n" +
+                        " - Thuốc: Thuốc chẹn beta (beta blockers) có thể làm chậm nhịp tim, trong khi dùng quá nhiều thuốc tuyến giáp lại có thể làm tăng nhịp tim."));
 
         return data;
     }
+
 }

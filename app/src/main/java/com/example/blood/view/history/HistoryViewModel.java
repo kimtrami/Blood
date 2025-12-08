@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.blood.databloodpressure.AppDatabase;
 import com.example.blood.databloodpressure.PressureEntity;
-
 import java.util.List;
 
 public class HistoryViewModel extends ViewModel {
@@ -24,6 +23,8 @@ public class HistoryViewModel extends ViewModel {
     public void getDataHistory(){
         new Thread(() -> {
             List<PressureEntity> list = appDatabase.pressureDao().getAll();
+            list.forEach(pressureEntity -> {
+            });
             pressureListLiveData.postValue(list);
         }).start();
     }

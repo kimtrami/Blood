@@ -1,5 +1,6 @@
 package com.example.blood.view.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,7 @@ public class ResulStatusHeartRateAdapter extends RecyclerView.Adapter<ResulStatu
         }
 
         public void bindView(HeartRateStatus heartRateStatus){
-            binding.bgStatus.setTextColor(heartRateStatus.getBgState());
+            binding.bgStatus.setTextColor(Color.parseColor(heartRateStatus.getBgState()));
             if(position == getAdapterPosition()){
                 binding.imgHeart.setVisibility(View.VISIBLE);
             } else {

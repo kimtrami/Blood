@@ -13,10 +13,10 @@ public class InfoViewModel extends ViewModel {
 
     public List<Infomation> initData() {
         ArrayList<Infomation> theInfomation = new ArrayList<>();
-        theInfomation.add(new Infomation("About Blood Pressure", R.drawable.img_blood_pressure, "#0AB678"));
-        theInfomation.add(new Infomation("About Blood Sugar", R.drawable.sugar_info, "#8296FF"));
-        theInfomation.add(new Infomation("About Heart Rate", R.drawable.heart_info, "#FDE400"));
-        theInfomation.add(new Infomation("About Weight & BMI", R.drawable.img_bmi, "#F7B11E"));
+        theInfomation.add(new Infomation("Về huyết áp", R.drawable.img_blood_pressure, "#0AB678"));
+        theInfomation.add(new Infomation("Về đường huyết", R.drawable.sugar_info, "#8296FF"));
+        theInfomation.add(new Infomation("Về nhịp tim", R.drawable.heart_info, "#FDE400"));
+        theInfomation.add(new Infomation("Về cân nặng & BMI", R.drawable.img_bmi, "#F7B11E"));
         // dong bo, postValue: bat dong bo
         return theInfomation;
     }

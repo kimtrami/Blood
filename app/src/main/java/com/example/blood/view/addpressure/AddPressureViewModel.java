@@ -91,30 +91,31 @@ public class AddPressureViewModel extends ViewModel {
         int img;
 
         if (sys < 120 && dia < 60) {
-            status = "Normal Blood Pressure";
+            status = "Huyết áp bình thường";
             img = R.drawable.normal_blood_pressure;
             state = 0;
         } else if ((sys >= 120 && sys <= 129) && (dia >= 60 && dia <= 79)) {
-            status = "Elevated Blood Pressure";
+            status = "Huyết áp tăng nhẹ";
             img = R.drawable.elevated_blood;
             state = 1;
         } else if ((sys >= 130 && sys <= 139) || (dia >= 80 && dia <= 89)) {
-            status = "High Blood Pressure - Stage 1";
+            status = "Huyết áp cao – Giai đoạn 1";
             img = R.drawable.high_blood_stoge1;
             state = 2;
         } else if ((sys >= 140 && sys <= 180) || (dia >= 90 && dia <= 120)) {
-            status = "High Blood Pressure - Stage 2";
+            status = "Huyết áp cao – Giai đoạn 2";
             img = R.drawable.high_blood_stoge2;
             state = 3;
         } else if (sys > 180 || dia > 120) {
-            status = "Dangerously High Blood Pressure";
+            status = "Huyết áp nguy hiểm";
             img = R.drawable.high_blood_stoge2;
             state = 4;
         } else {
-            status = "Normal Blood Pressure";
+            status = "Huyết áp bình thường";
             img = R.drawable.normal_blood_pressure;
             state = 0;
         }
+
 
         return new AddPressure(status, state, img);
     }

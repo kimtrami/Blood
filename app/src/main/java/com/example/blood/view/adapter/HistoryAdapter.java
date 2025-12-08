@@ -1,5 +1,6 @@
 package com.example.blood.view.adapter;
 
+import android.icu.text.SimpleDateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blood.databinding.ItemHistoryBinding;
 import com.example.blood.databloodpressure.PressureEntity;
+import com.example.blood.databloodsugar.BloodSugarEntity;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
 
@@ -33,7 +37,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.bindView(data.get(position));
     }
 
     @Override
@@ -41,17 +45,31 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         return data.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         private ItemHistoryBinding binding;
 
         public ViewHolder(ItemHistoryBinding binding) {
             super(binding.getRoot());
+            this.binding = binding;
         }
 
-        public void bindView(PressureEntity entity){
+        public void bindView(PressureEntity entity) {
+
+
+            long timestamp = entity.getTime(); // ví dụ: 1731479445000
+
+            // Format giờ:phút
+            SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            String time = timeFormat.format(new Date(timestamp));
+
+            // Format ngày/tháng/năm
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            String date = dateFormat.format(new Date(timestamp));
+
+
             binding.txtDate.setText(entity.getDate());
-            binding.txtTime.setText(entity.getTime() + "");
+            binding.txtTime.setText(time);
             binding.txtTitle.setText("Blood Pressure");
         }
     }

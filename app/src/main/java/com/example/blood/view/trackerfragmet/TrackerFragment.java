@@ -52,24 +52,25 @@ public class TrackerFragment extends BaseFragment<FragmentTrackerBinding> implem
 
     @Override
     public void onClickItem(int position) {
-        Intent intent ;
+        Intent intent;
         switch (position) {
             case 0:
                 intent = new Intent(getActivity(), AddBloodPressureActivity.class);
-                intent.putExtra("Pressure", "Add Blood Pressure");
+                intent.putExtra("Pressure", "Thêm huyết áp");
                 startActivity(intent);
                 break;
             case 1:
                 intent = new Intent(getActivity(), AddBloodSugarActivity.class);
-                intent.putExtra("Sugar", "Add Blood Sugar");
+                intent.putExtra("Sugar", "Thêm đường huyết");
                 startActivity(intent);
                 break;
             case 2:
                 intent = new Intent(getActivity(), AddHeartRateActivity.class);
-                intent.putExtra("heartRate", "Add Heart Reate");
+                intent.putExtra("heartRate", "Thêm nhịp tim");
                 startActivity(intent);
                 break;
         }
     }
+
 
 }

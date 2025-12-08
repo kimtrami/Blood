@@ -76,18 +76,18 @@ public class HeartRateViewModel extends ViewModel {
 
         if (bpm <= 60) {
             img = R.drawable.low_heart_rate;
-            titleState = "Low Heart Rate";
-            status = "Resting Heart Rate ≤ 60 BPM";
+            titleState = "Nhịp tim thấp";
+            status = "Nhịp tim lúc nghỉ ≤ 60 BPM";
             textColor = Color.parseColor("#41ACE9");
         } else if (bpm <= 100) {
             img = R.drawable.heart_normal;
-            titleState = "Normal Heart Rate";
-            status = "Resting Heart Rate 60-100 BPM";
+            titleState = "Nhịp tim bình thường";
+            status = "Nhịp tim lúc nghỉ 60–100 BPM";
             textColor = Color.parseColor("#00C57E");
         } else {
             img = R.drawable.diabetes_heart_rate;
-            titleState = "Diabetes Heart Rate";
-            status = "Resting Heart Rate ≥ 100 BPM";
+            titleState = "Nhịp tim cao";
+            status = "Nhịp tim lúc nghỉ ≥ 100 BPM";
             textColor = Color.parseColor("#FB5555");
         }
 
@@ -97,9 +97,9 @@ public class HeartRateViewModel extends ViewModel {
     public List<HeartRate> intiData() {
         data = new ArrayList<>();
 
-        data.add(new HeartRate("Low", "#41ACE9", "#41ACE9", "≤ 60"));
-        data.add(new HeartRate("Normal", "#00C57E", "#00C57E", "60 - 100"));
-        data.add(new HeartRate("High", "#FB5555", "#FB5555", "≥ 100"));
+        data.add(new HeartRate("Thấp", "#41ACE9", "#41ACE9", "≤ 60"));
+        data.add(new HeartRate("Bình Thường", "#00C57E", "#00C57E", "60 - 100"));
+        data.add(new HeartRate("Cao", "#FB5555", "#FB5555", "≥ 100"));
         return data;
     }
 }

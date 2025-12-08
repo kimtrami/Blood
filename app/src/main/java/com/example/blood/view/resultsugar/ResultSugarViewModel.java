@@ -15,29 +15,42 @@ public class ResultSugarViewModel extends ViewModel {
 
     public List<ResultSugar> initDataResult() {
         dataResult = new ArrayList<>();
-        dataResult.add(new ResultSugar("Why test your blood sugar", "Blood sugar self - testing can be particularly beneficial for the elderly and those with diabetes (Type 1 or Type 2) or diabetic symptoms as it enables monitoring of blood sugar levels, preventing severe complications, and seeking treatment at an earlies stage. Additionally, it can assist in the following ways:\n" +
-                "- Monitor the effect of diabets medications.\n" +
-                "- Track youe progress in overall treatment.\n" +
-                "- Know how orther factors, such as diet, exercise, illness and stress, affect blood sugar levels.\n" +
-                "Depending on the type of diabetes and treatment plan, the timing of blood sugar measurements may vary."));
 
-        dataResult.add(new ResultSugar("Type 1 diabetes", "Usually your doctor will suggest you test 4 to 10 times a day recommended testing time:\n" +
-                "- Before you eat\n" +
-                "- Before and after exercise\n" +
-                "- Before you sleep\n" +
-                "- At nighyt\n" +
-                "- If you are sick, changing your daily routine, or talking a new medication, it is recommended to check your blood sugar more frequently."));
+        dataResult.add(new ResultSugar(
+                "Vì sao cần kiểm tra đường huyết?",
+                "Việc tự kiểm tra đường huyết đặc biệt có lợi cho người lớn tuổi và những người mắc bệnh tiểu đường (type 1 hoặc type 2) hoặc có triệu chứng tiểu đường. "
+                        + "Nó giúp theo dõi mức đường huyết, ngăn ngừa biến chứng nặng, và phát hiện sớm để điều trị kịp thời. Ngoài ra, việc kiểm tra giúp bạn:\n"
+                        + "- Theo dõi hiệu quả của thuốc điều trị tiểu đường.\n"
+                        + "- Theo dõi tiến trình điều trị tổng thể.\n"
+                        + "- Biết được các yếu tố khác như chế độ ăn, tập luyện, bệnh tật hay căng thẳng ảnh hưởng đến đường huyết ra sao.\n"
+                        + "Tùy vào loại tiểu đường và phác đồ điều trị, thời điểm kiểm tra đường huyết có thể khác nhau."
+        ));
 
-        dataResult.add(new ResultSugar("Type 2 diabetes", "The frequency depend on what you take treat your diabetes:\n" +
-                "Insulin\n" +
-                "Your doctor may ask you to check serveral time a day, depending on the type and amount of insulin you use:\n" +
-                "- If you are administering daily injections, it is recommended to test your blood sugar levels before eating and before going to bed.\n" +
-                "- If you are only using intermediate or long-acting insulin, it may be sufficient to test your blood sugar levels twice a day, before breakfast and dinner.\n" +
-                "Non insulin medications or lifestyle changes (diet and exercise)\n" +
-                "You may not be asked to test your blood sugar on a daily basis"));
+        dataResult.add(new ResultSugar(
+                "Tiểu đường type 1",
+                "Thông thường, bác sĩ sẽ khuyên bạn kiểm tra đường huyết 4 đến 10 lần mỗi ngày. "
+                        + "Các thời điểm kiểm tra được khuyến nghị:\n"
+                        + "- Trước khi ăn\n"
+                        + "- Trước và sau khi tập thể dục\n"
+                        + "- Trước khi ngủ\n"
+                        + "- Vào ban đêm\n"
+                        + "- Nếu bạn bị ốm, thay đổi thói quen sinh hoạt hoặc dùng thuốc mới, bạn nên kiểm tra đường huyết thường xuyên hơn."
+        ));
+
+        dataResult.add(new ResultSugar(
+                "Tiểu đường type 2",
+                "Tần suất kiểm tra tùy thuộc vào phương pháp điều trị bạn đang sử dụng:\n"
+                        + "Insulin:\n"
+                        + "Bác sĩ có thể yêu cầu bạn kiểm tra nhiều lần trong ngày, tùy vào loại và liều lượng insulin:\n"
+                        + "- Nếu bạn tiêm insulin hằng ngày, bạn nên đo đường huyết trước bữa ăn và trước khi đi ngủ.\n"
+                        + "- Nếu bạn chỉ dùng insulin tác dụng trung bình hoặc kéo dài, bạn có thể chỉ cần đo 2 lần/ngày: trước bữa sáng và trước bữa tối.\n"
+                        + "Thuốc không phải insulin hoặc thay đổi lối sống (ăn uống – tập luyện):\n"
+                        + "Bạn có thể không cần kiểm tra đường huyết hằng ngày."
+        ));
 
         return dataResult;
     }
+
 
     public List<Sugar> initDataSugarStatus() {
         dataSugarStatus = new ArrayList<>();
@@ -55,18 +68,19 @@ public class ResultSugarViewModel extends ViewModel {
         int colorState;
 
         if (concentration < 4.0) {
-            state = "Low";
+            state = "Đường huyết thấp";
             colorState = R.color.Low;
         } else if (concentration < 5.5) {
-            state = "Normal";
+            state = "Đường huyết bình thường";
             colorState = R.color.Normal;
         } else if (concentration < 7.0) {
-            state = "Pre-diabetes";
+            state = "Tiền tiểu đường";
             colorState = R.color.bp_elevated;
         } else {
-            state = "Diabetes";
+            state = "Tiểu đường";
             colorState = R.color.bp_danger;
         }
+
 
         return new ResultSugar(state, colorState);
     }
