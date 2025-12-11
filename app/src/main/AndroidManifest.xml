@@ -44,6 +44,10 @@
         <activity android:name=".view.infodetailbloodsugar.InfoDetailBloodSugarActivity"/>
         <activity android:name=".view.infodetailheartrate.InfoDetailHeartRateActivity"/>
         <activity android:name=".view.infodetailweightbmi.InfoDetailWeightBmiActivity"/>
+        <activity android:name=".view.policyactivity.PolicyActivity"/>
+        <activity android:name=".view.history.ActivityHistoryPressure"/>
+        <activity android:name=".view.history.ActivityHistoryBloodSugar"/>
+        <activity android:name=".view.history.ActivityHistoryHearRate"/>
 
     </application>
 

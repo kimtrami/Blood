@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dialog">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chia sẻ lên"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_semi_bold_600"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutShare"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgZalo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="Zalo"
+            android:src="@drawable/ic_zalo" />
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="Facebook"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageView
+            android:id="@+id/ic_tiktok"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="Facebook"
+            android:src="@drawable/ic_tiktok" />
+
+        <ImageView
+            android:id="@+id/imgTiktok"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="Facebook"
+            android:src="@drawable/ic_mess" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

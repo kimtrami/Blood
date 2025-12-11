@@ -21,8 +21,8 @@ public class DataManager {
         return dataManager;
     }
 
-    public com.example.blood.databloodsugar.AppDatabase createDataBase(Context context) {
-        return Room.databaseBuilder(context, AppDatabase.class, "db_blood_sugar")
+    public AppDatabaseSugar createDataBase(Context context) {
+        return Room.databaseBuilder(context, AppDatabaseSugar.class, "db_blood_sugar")
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();

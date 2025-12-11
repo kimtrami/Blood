@@ -17,8 +17,8 @@ public class DataManager {
         return  dataManager;
     }
 
-    public com.example.blood.dataHeartRate.AppDataBase createDataBase(Context context){
-        return Room.databaseBuilder(context, com.example.blood.dataHeartRate.AppDataBase.class, "db_heart_rate")
+    public AppDataBaseHeartRate createDataBase(Context context){
+        return Room.databaseBuilder(context, AppDataBaseHeartRate.class, "db_heart_rate")
                 .fallbackToDestructiveMigrationOnDowngrade()
                 .allowMainThreadQueries()
                 .build();

@@ -2,6 +2,7 @@ package com.example.blood.view.resultheartrate;
 
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -54,6 +55,7 @@ public class ResultHeartRateActivity extends BaseActivity<ActivityResultHeartRat
 
         Gson gson = new Gson();
         entity = gson.fromJson(json, HeartRateEntity.class);
+
 
     }
 

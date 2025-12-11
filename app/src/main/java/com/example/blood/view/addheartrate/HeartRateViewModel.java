@@ -9,7 +9,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.blood.R;
-import com.example.blood.dataHeartRate.AppDataBase;
+import com.example.blood.dataHeartRate.AppDataBaseHeartRate;
 import com.example.blood.dataHeartRate.DataManager;
 import com.example.blood.dataHeartRate.HeartRateEntity;
 import com.example.blood.model.HeartRate;
@@ -23,7 +23,7 @@ import java.util.List;
 public class HeartRateViewModel extends ViewModel {
 
     private List<HeartRate> data;
-    private AppDataBase db;
+    private AppDataBaseHeartRate db;
     private final MutableLiveData<Long> preMutableLiveData = new MutableLiveData<>();
     private HeartRateEntity heartRateEntity = new HeartRateEntity();
 

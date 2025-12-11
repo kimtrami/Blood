@@ -7,7 +7,7 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.blood.databloodsugar.AppDatabase;
+import com.example.blood.databloodsugar.AppDatabaseSugar;
 import com.example.blood.databloodsugar.BloodSugarEntity;
 import com.example.blood.databloodsugar.DataManager;
 import com.example.blood.model.Sugar;
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class AddBloodSugarViewModel extends ViewModel {
 
-    private AppDatabase appDatabase;
+    private AppDatabaseSugar appDatabase;
     private BloodSugarEntity bloodSugarEntity = new BloodSugarEntity();
     private final MutableLiveData<Long> preMutableLiveData = new MutableLiveData<>();
 

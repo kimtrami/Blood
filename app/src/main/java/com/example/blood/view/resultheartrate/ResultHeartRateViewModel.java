@@ -11,9 +11,6 @@ import java.util.List;
 
 public class ResultHeartRateViewModel extends ViewModel {
 
-    private List<InfoDetail> data = new ArrayList<>();
-
-
     public List<HeartRateStatus> initDataStatus(){
 
         List<HeartRateStatus> data = new ArrayList<>();
@@ -47,6 +44,9 @@ public class ResultHeartRateViewModel extends ViewModel {
 
 
     public List<InfoDetail> initDataDetail(){
+
+        List<InfoDetail> data = new ArrayList<>();
+
         data.add(new InfoDetail(
                 "Bạn cần biết gì về\nnhịp tim của mình?",
                 "Ngay cả khi bạn không phải là vận động viên, hiểu rõ về nhịp tim cũng giúp bạn theo dõi mức độ thể chất — và thậm chí có thể giúp bạn phát hiện sớm các vấn đề sức khỏe.\n" +

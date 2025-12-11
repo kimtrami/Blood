@@ -1,7 +1,9 @@
 package com.example.blood.view.history;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.lifecycle.ViewModelProvider;
@@ -19,8 +21,6 @@ import java.util.List;
 
 public class HistoryFragment extends BaseFragment<FragmentHistoryBinding> {
 
-    private HistoryViewModel historyViewModel;
-    private HistoryAdapter adapter;
 
     @Override
     protected FragmentHistoryBinding inflateBinding(LayoutInflater inflater, ViewGroup container) {
@@ -28,35 +28,35 @@ public class HistoryFragment extends BaseFragment<FragmentHistoryBinding> {
     }
 
     @Override
-    public void initializeComponent() {
-        super.initializeComponent();
-
-        adapter = new HistoryAdapter();
-        binding.lstHistory.setAdapter(adapter);
-
-
-        historyViewModel = new ViewModelProvider(requireActivity()).get(HistoryViewModel.class);
-        AppDatabase appDatabase = DataManager.getInstance().createDataBase(requireContext());
-        historyViewModel.setAppDatabase(appDatabase);
-        historyViewModel.getDataHistory();
-    }
-
-
-    @Override
     public void initializeEvent() {
         super.initializeEvent();
-    }
 
 
-    @Override
-    public void initializeData() {
-        super.initializeData();
-    }
-
-    @Override
-    public void bindView() {
-        historyViewModel.getPressureListLiveData().observe(getViewLifecycleOwner(), list -> {
-            adapter.setData(list);
+        binding.btnHistoryPressure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), ActivityHistoryPressure.class);
+                startActivity(intent);
+            }
         });
+
+        binding.btnHistoryBloodSugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), ActivityHistoryBloodSugar.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.btnHistoryHeatRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), ActivityHistoryHearRate.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 }
