@@ -66,6 +66,15 @@ public class ResultSugarActivity extends BaseActivity<ActivityResultBloodSugarBi
             startActivity(intent);
             finish();
         });
+
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
     }
 
     @Override

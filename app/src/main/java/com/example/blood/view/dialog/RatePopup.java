@@ -1,4 +1,6 @@
 package com.example.blood.view.dialog;
 
-public class RatePopup {
+import android.widget.PopupWindow;
+
+public class RatePopup extends PopupWindow {
 }

@@ -35,7 +35,7 @@
         android:paddingTop="16dp"
         android:paddingEnd="24dp"
         android:paddingBottom="16dp"
-        android:text="Lịch sử đường huyết"
+        android:text="Lịch sử huyết áp"
         android:textColor="@color/white"
         android:textSize="16sp" />
 

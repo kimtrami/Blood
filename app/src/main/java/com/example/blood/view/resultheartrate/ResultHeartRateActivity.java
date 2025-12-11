@@ -68,11 +68,14 @@ public class ResultHeartRateActivity extends BaseActivity<ActivityResultHeartRat
 
     @Override
     public void initializeData() {
-        data = viewModel.initDataDetail();
-        adapterDetail.setData(data);
 
         dataRate = viewModel.initDataStatus();
         resulStatusHeartRateAdapter.setData(dataRate);
+
+        data = viewModel.initDataDetail();
+        adapterDetail.setData(data);
+
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
