@@ -56,7 +56,6 @@ public class ResultHeartRateActivity extends BaseActivity<ActivityResultHeartRat
         Gson gson = new Gson();
         entity = gson.fromJson(json, HeartRateEntity.class);
 
-
     }
 
     @Override

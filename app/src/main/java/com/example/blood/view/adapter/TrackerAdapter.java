@@ -16,10 +16,18 @@ import java.util.List;
 public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHolder> {
 
     private List<Tracker> data = new ArrayList<>();
-
     private onClickItemInfo onClickItemInfo;
 
-    public void setOnClickItemInfo(com.example.blood.view.adapter.onClickItemInfo onClickItemInfo) {
+    private int maxPressure;
+    private int minPressure;
+
+    private float maxSugar;
+    private float minSugar;
+
+    private int maxHeart;
+    private int minHeart;
+
+    public void setOnClickItemInfo(onClickItemInfo onClickItemInfo) {
         this.onClickItemInfo = onClickItemInfo;
     }
 
@@ -29,18 +37,29 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHold
         notifyDataSetChanged();
     }
 
+    public void setMaxPressure(int value) { this.maxPressure = value; notifyDataSetChanged(); }
+    public void setMinPressure(int value) { this.minPressure = value; notifyDataSetChanged(); }
+
+    public void setMaxSugar(float value) { this.maxSugar = value; notifyDataSetChanged(); }
+    public void setMinSugar(float value) { this.minSugar = value; notifyDataSetChanged(); }
+
+    public void setMaxHeart(int value) { this.maxHeart = value; notifyDataSetChanged(); }
+    public void setMinHeart(int value) { this.minHeart = value; notifyDataSetChanged(); }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        ItemTrackerBinding binding = ItemTrackerBinding.inflate(inflater, parent, false);
+        ItemTrackerBinding binding = ItemTrackerBinding.inflate(
+                LayoutInflater.from(parent.getContext()),
+                parent,
+                false
+        );
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Tracker tracker = data.get(position);
-        holder.bindView(tracker);
+        holder.bindView(data.get(position));
     }
 
     @Override
@@ -56,18 +75,36 @@ public class TrackerAdapter extends RecyclerView.Adapter<TrackerAdapter.ViewHold
             super(binding.getRoot());
             this.binding = binding;
 
-            binding.btnAddRecordBlood.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    onClickItemInfo.onClickItem(getAdapterPosition());
-                }
-            });
+            binding.btnAddRecordBlood.setOnClickListener(
+                    view -> onClickItemInfo.onClickItem(getAdapterPosition())
+            );
         }
 
         public void bindView(Tracker tracker) {
+
             binding.imgBloodSugare.setImageResource(tracker.getSrc());
             binding.txtBlood.setText(tracker.getTitle());
-        }
 
+            binding.Max.setVisibility(View.VISIBLE);
+            binding.Min.setVisibility(View.VISIBLE);
+
+            switch (tracker.getTitle()) {
+
+                case "Huyết áp":
+                    binding.Max.setText(String.valueOf(maxPressure));
+                    binding.Min.setText(String.valueOf(minPressure));
+                    break;
+
+                case "Đường huyết":
+                    binding.Max.setText(String.format("%.1f", maxSugar));
+                    binding.Min.setText(String.format("%.1f", minSugar));
+                    break;
+
+                case "Nhịp tim":
+                    binding.Max.setText(String.valueOf(maxHeart));
+                    binding.Min.setText(String.valueOf(minHeart));
+                    break;
+            }
+        }
     }
 }

@@ -11,11 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.blood.databinding.ItemHeartRateStatusDetailBinding;
 import com.example.blood.model.HeartRateStatus;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResulStatusHeartRateAdapter extends RecyclerView.Adapter<ResulStatusHeartRateAdapter.ViewHolder> {
 
-    private List<HeartRateStatus> data;
+    private List<HeartRateStatus> data =  new ArrayList<>();
     private int position = 0;
 
     public void setData(List<HeartRateStatus> data) {

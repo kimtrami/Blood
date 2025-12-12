@@ -107,6 +107,8 @@ public class AddBloodSugarActivity extends BaseActivity<ActivityAddBloodSugarBin
 
         });
 
+        binding.btnBack.setOnClickListener(v -> finish());
+
     }
 
     @Override
